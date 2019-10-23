@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: f3ab0ffe7104b4c47ad7550179c4eb1f
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Gen Jyuu Gothic LP
+  fontNames:
+  - Gen Jyuu Gothic LP
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 81be6ecb6fbc6f24f98d81497d23eb6d, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
