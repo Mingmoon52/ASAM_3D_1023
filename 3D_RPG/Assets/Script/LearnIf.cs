@@ -47,7 +47,11 @@ public class LearnIf : MonoBehaviour
             print("被當惹");
         }
 
-        if (Attack <= 50)
+        if (Attack < 50)
+        {
+            print("攻擊無倍數");
+        }
+        else if(Attack <= 50)
         {
             print("攻擊2倍");
         }
