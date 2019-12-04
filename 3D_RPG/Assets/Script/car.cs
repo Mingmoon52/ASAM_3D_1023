@@ -56,6 +56,13 @@ public class car : MonoBehaviour
     //自訂方法不會執行必須呼叫
     //參數可以加預設值:選填式參數(只能放在最右邊)
 
+        /// <summary>
+        /// 開車方法
+        /// </summary>
+        /// <param name="speed"></param>
+        /// <param name="direction"></param>
+        /// <param name="sound"></param>
+        /// <param name="effect"></param>
     public void Drive(int speed,string direction,string sound = "噗噗噗",string effect = "煙霧")
     {
         print("開車囉，時數:" + speed);
@@ -64,6 +71,10 @@ public class car : MonoBehaviour
         print("特效:" + effect);
     }
     //傳回類型:int float string bool
+    /// <summary>
+    /// 運算稅金方法
+    /// </summary>
+    /// <returns></returns>
     public int Tax()
     {
         return cc * 1000;
