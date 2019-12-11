@@ -30,7 +30,7 @@ public class LearnIf : MonoBehaviour
             print("關門");
         }
 
-        if (score >= 60)
+        /**if (score >= 60)
         {
             print("及格");
         }
@@ -45,23 +45,19 @@ public class LearnIf : MonoBehaviour
         else 
         {
             print("被當惹");
-        }
+        }*/
 
-        if (Attack < 50)
+         if(Attack >= 150)
         {
-            print("攻擊無倍數");
+            print("攻擊10倍");
         }
-        else if(Attack <= 50)
-        {
-            print("攻擊2倍");
-        }
-        else if (Attack <= 100)
+        else if (Attack >= 100)
         {
             print("攻擊5倍");
         }
-        else if (Attack <= 150)
+        else if (Attack >= 50)
         {
-            print("攻擊10倍");
+            print("攻擊2倍");
         }
     }
 

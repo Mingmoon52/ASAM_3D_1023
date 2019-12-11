@@ -24,27 +24,36 @@ public class Player : MonoBehaviour
     /// 跑步
     /// </summary>
     private void Run()
-    { 
-    
+    {
+        print(Input.GetAxis("Horizontal"));//Horizontal A 左 -1、D 右 1、沒按0   
+        print(Input.GetAxis("Vertical"));//Vertical S 下 -1、W 上 1、沒按0
     }
     /// <summary>
     /// 跳躍
     /// </summary>
     private void Jump()
-    { 
-    
+    {
+        if (Input.GetKeyDown(KeyCode.Space)) 
+        {
+            print("跳躍動畫");
+        }
+        
     }
     /// <summary>
     /// 攻擊
     /// </summary>
     private void Attack()
-    { 
-    
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            print("攻擊動畫");
+        }
+        
     }
     /// <summary>
     /// 受傷
     /// </summary>
-    /// <param name="damage">damage</param>
+    /// <param name="damage">接收傷害值damage</param>
     private void Damage(float damage)
     { 
     
@@ -68,7 +77,7 @@ public class Player : MonoBehaviour
     /// </summary>
     private void Pass()
     {
-
+        
     }
     #endregion
     /* [Header("跑步"), Range(500, 1000)]
@@ -97,5 +106,10 @@ public class Player : MonoBehaviour
 
      [Header("血量"), Range(0, 1000)]
      public int blood;*/
-
+    private void Update()
+    {
+        Jump();
+        Run();
+        Attack();
+    }
 }
