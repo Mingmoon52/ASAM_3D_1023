@@ -19,24 +19,38 @@ public class Player : MonoBehaviour
     public float hp = 100;
     #endregion
 
+    public Animator ani;
+
     #region 方法區域 
     /// <summary>
     /// 跑步
     /// </summary>
     private void Run()
     {
-        print(Input.GetAxis("Horizontal"));//Horizontal A 左 -1、D 右 1、沒按0   
-        print(Input.GetAxis("Vertical"));//Vertical S 下 -1、W 上 1、沒按0
+        //print(Input.GetAxis("Horizontal"));//Horizontal A 左 -1、D 右 1、沒按0   
+        //print(Input.GetAxis("Vertical"));//Vertical S 下 -1、W 上 1、沒按0
+        float h = Input.GetAxis("Horizontal");
+        float v = Input.GetAxis("Vertical");
+
+        ani.SetBool("跑步", h != 0 || v != 0);
     }
     /// <summary>
     /// 跳躍
     /// </summary>
     private void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) 
-        {
-            print("跳躍動畫");
-        }
+        ani.SetBool("跳", Input.GetKeyDown(KeyCode.Space));
+
+
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    print("跳躍動畫");
+        //    ani.SetBool("跳", true);
+        //}
+        //else
+        //{
+        //    ani.SetBool("跳", false);
+        //}
         
     }
     /// <summary>
@@ -46,8 +60,10 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            print("攻擊動畫");
+            //print("攻擊動畫");
+            ani.SetTrigger("攻擊");
         }
+
         
     }
     /// <summary>
