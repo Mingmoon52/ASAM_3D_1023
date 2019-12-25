@@ -5,7 +5,7 @@ using UnityEngine;
 public class NPC : MonoBehaviour
 {
     private string npcName = "聖誕矮人";
-    private string npcContent = "可以幫我找三棵樹嗎?";
+    private string npcContent = "可以幫我找三顆高麗菜嗎?";
 
     [Header("對話系統")]
     public DialogSystem ds;
